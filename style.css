@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Century Gothic, sans-serif;
+}
+
+body {
+
+}
+
+/* HEADER */
+
+#headerBox
+{
+    width: 80vw;
+    height: 10vw;
+    margin: auto;
+
+    opacity: .90;
+    border-radius: 1vw;
+}
+
+#myName {
+
+	opacity:0;
+	font-size:7vw;
+	text-align:center;
+	margin:auto;
+	width:50vw;
+	color:#031626;
+}
+
+#loadingLine {
+	position:absolute;
+	background-color: grey;
+	width:20vw;
+	height:.35vw;
+	margin-left:30vw;
+	margin-top:8vh;
+	opacity:1;
+}
+
+#skillsBar {
+
+	width:50vw;
+	text-align:center;
+	margin:auto;
+	margin-top:2%;
+	opacity:0;
+}
+
+
+.skillsImg {
+
+	display:none;
+	height:50%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	box-shadow:         0 6px 4px -5px #ccc;
+}
+
+
+/* Navigation */
+
+#navBar
+{
+    position: absolute;
+    width: 78vw;
+    margin-top: 11%;
+
+    text-align: center;
+    text-align: center;
+
+    padding-left:1vw;
+    padding-right:1vw;
+}
+
+#navBar ul
+{
+    list-style: none;
+
+}
+#navBar li
+{
+    display: inline-table;
+        margin-left:1vw;
+    margin-right:1vw;
+}
+
+
+
+#navBtn
+{
+    width: 130px;
+    height: 40px;
+    padding: 0;
+    color: black;
+    background-color: white;
+    border-color:black;
+    border-width: 5%;
+	border-radius:4px;
+}
+
+#navBtn:hover
+{
+    box-shadow: 0 0 1vw 1vh #bacde0, 0 0 1vw 1vh #FFFFFF;
+    transition:1s;
+
+}
+
+
+
+/* Body */
+
+
+#mainbox {
+
+	width: 55vw;
+    height: 15vw;
+    margin: auto;
+    margin-top: 9vw;
+    text-align:justify;
+    text-justify: inter-word;
+    color:#031626;
+    border-radius: 1vw;
+    line-height: 4vh;
+}
+
+#intro {
+
+	
+
+}
+
+#scrollArrow {
+
+	opacity:0;
+	position:absolute;
+	left:50%;
+	top:90%;
+	opacity:.6;
+	height:30px;
+}
