@@ -15,7 +15,7 @@ body {
     width: 80vw;
     height: 10vw;
     margin: auto;
-    margin-top:5vh;
+    margin-top:3vh;
 
     opacity: .90;
     border-radius: 1vw;
@@ -34,7 +34,7 @@ body {
 #loadingLine {
   position: absolute;
   top: 34%;
-  left: 36.5%;
+  left: 37.1%;
   width:27%;
   height:.7%;
 	background-color: grey;
@@ -116,7 +116,7 @@ body {
 
 #mainbox {
 
-	width: 55vw;
+	 width: 55vw;
     height: 15vw;
     margin: auto;
     margin-top: 9vw;
@@ -125,20 +125,78 @@ body {
     color:#031626;
     border-radius: 1vw;
     line-height: 4vh;
+      visibility:hidden;
+}
+#contactBox {
+  height:50px;
+  width:295.5px;
+  text-align:center
+  display:inline-block;
+  margin:auto;
+  margin-top:4%;
+  visibility:hidden;
+
+
+}
+#contactBtn {
+
+  display:inline-block;
+  border-radius:4px;
+  text-align:center;
+  padding-left:32px;
+  height:34px;
+  width:80px;
+  padding-top:8px;
+  margin-left:5%;
+  margin-right:5%;
+
+
 }
 
-#intro {
+.googleBtn{
 
-
+  border: 2px solid #c6463f;
+  color:#c6463f;
+  border-color:#c6463f;
+    opacity:.4;
 
 }
+
+.gitBtn{
+  border: 2px solid #0026B6;
+  color:#0026B6;
+  border-color:#0026B6;
+    opacity:.4;
+}
+
+.gitBtn:hover{
+  box-shadow: 0 0 8px 1px #0026B6, 0 0 2px 1px #FFFFFF;
+  opacity:1;
+  transition:1.4s;
+
+}
+
+.googleBtn:hover{
+
+  box-shadow: 0 0 8px 1px #c6463f, 0 0 2px 1px #FFFFFF;
+  opacity:1;
+  transition:1.4s;
+}
+
+#contactImg {
+  position:absolute;
+  margin-left:-2.5%;
+  margin-top:-.15%;
+  height: 28px;
+}
+
 
 #scrollArrow {
 
-	opacity:0;
+	visibility:hidden;
 	position:absolute;
-	left:48%;
-	top:85%;
+	left:48.2%;
+	top:89%;
 	opacity:.6;
 	height:50px;
 }
