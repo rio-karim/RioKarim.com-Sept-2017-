@@ -24,7 +24,7 @@
 -->
 
 
-<!-- Web: 	HSN (HTML, CSS, JAVASCRIPT, JQUERY, NODE, PHP, SQL 
+<!-- Web: 	HSN (HTML, CSS, JAVASCRIPT, JQUERY, NODE, PHP, SQL
 			Galactisee (HTML, CSS, JAVASCRIPT, ANGULAR, NODE, AJAX, REST
 			Star Wars (HTML, CSS, JAVASCRIPT)
 			Tottenham (HTML, CSS)
@@ -75,10 +75,10 @@
 
 
 <!-- MAIN BODY AND ARTICLES -->
-	
+
 		<div id="mainbox" class="mainbox">
 		<p id="intro">
-			I believe one of my most noticeable qualities is being approachable and easy-going, with a sense of humour ready to hand; but most importantly, compassion towards the needs of others. Always willing to go the extra mile for someone, results on any project often come from dedicating yourself to being a people person, both in and out of work. <strong>I am a Web Developer</strong> who recognises an ability to communicate with people of all ages and cultures, which will ultimately contribute to long-term happiness, and success. 
+			I believe one of my most noticeable qualities is being approachable and easy-going, with a sense of humour ready to hand; but most importantly, compassion towards the needs of others. Always willing to go the extra mile for someone, results on any project often come from dedicating yourself to being a people person, both in and out of work. <strong>I am a Web Developer</strong> who recognises an ability to communicate with people of all ages and cultures, which will ultimately contribute to long-term happiness, and success.
 			</p>
 
 		</div>
@@ -115,7 +115,7 @@
 				if (i == 1) {
 					$('#skillsBar').css({'opacity': 1});
 				}
-				$('#skill'+i).fadeOut(1)	
+				$('#skill'+i).fadeOut(1)
 				$('#skill'+i).fadeIn((i*1000)/2);
 
 			}
@@ -128,7 +128,7 @@
 
 		setTimeout(function () {
 		    $("#mainbox").fadeIn(1000);
-		}, 4240);	
+		}, 4240);
 
 		setTimeout(function () {
 		    $("#scrollArrow").fadeIn(1000);
@@ -140,7 +140,7 @@
 	    		}, 500).animate({
 	     			"top" : "-=5px"
 	    		}, 500);
-	    	}	
+	    	}
 		}, 5800);
 
 		$(window).scroll(function() {
@@ -154,25 +154,25 @@
       $('#scrollArrow').fadeIn();
      }
  });
-		
+
 
 		$(function () {
 	  		$('#loadingLine').animate({
-	      			"left" : "300px"
+	      			"left" : "+=150px"
 	    		}, 500).animate({
-	     			"left" : "0px"
+	     			"left" : "-=300px"
 	    		}, 500).animate({
-	      			"left" : "300px"
+	      			"left" : "+=300px"
 	    		}, 500).animate({
-	     			"left" : "0px"
+	     			"left" : "-=300px"
 	    		}, 500).animate({
-	      			"left" : "300px"
+	      			"left" : "+=300px"
 	    		}, 500).animate({
-	     			"left" : "0px"
+	     			"left" : "-=300px"
 	    		}, 500);
 	  	});
 
-		
+
 /* SCROLL LOCK */
 
 function lockScroll() {
@@ -180,7 +180,7 @@ $('html, body').css({
     overflow: 'hidden',
     height: '100%'
 });
-} 
+}
 
 function unlockScroll(){
 	$('html, body').css({
@@ -198,4 +198,3 @@ setTimeout(unlockScroll, 9000);
 </script>
 
 </html>
-

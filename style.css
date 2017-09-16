@@ -32,12 +32,12 @@ body {
 }
 
 #loadingLine {
-	position:absolute;
+  position: absolute;
+  top: 34%;
+  left: 36.5%;
+  width:27%;
+  height:.7%;
 	background-color: grey;
-	width:20vw;
-	height:.35vw;
-	margin-left:30vw;
-	margin-top:8vh;
 	opacity:1;
 }
 
