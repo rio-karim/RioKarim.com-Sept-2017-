@@ -149,8 +149,13 @@ body {
   padding-top:8px;
   margin-left:5%;
   margin-right:5%;
+}
 
-
+#contactImg {
+  position:absolute;
+  margin-left: -36px;
+  margin-top:-.15%;
+  height: 28px;
 }
 
 .googleBtn{
@@ -183,12 +188,7 @@ body {
   transition:1.4s;
 }
 
-#contactImg {
-  position:absolute;
-  margin-left:-2.5%;
-  margin-top:-.15%;
-  height: 28px;
-}
+
 
 
 #scrollArrow {
