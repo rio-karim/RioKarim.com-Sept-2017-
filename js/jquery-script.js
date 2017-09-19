@@ -12,6 +12,8 @@ $(function() {
   $('#personalBar').fadeOut(1).css({'visibility': 'visible'});
   $('#contactBar').fadeOut(1).css({'visibility': 'visible'});
   $('#scrollArrow').fadeOut(1).css({'visibility': 'visible'});
+  $('.content').fadeOut(1).css({'visibility': 'visible'});
+  $('#projectsHeader').fadeOut(1).css({'visibility': 'visible'});
 
   setTimeout(		function (){
     for (var i = 1; i < 9; i++){
@@ -35,12 +37,13 @@ $(function() {
 
   setTimeout(function () {
       $("#scrollArrow").fadeIn(1000);
+      $("#contactBar").fadeIn(1000);
   }, 5600);
 
-
-      setTimeout(function () {
-              $("#contactBar").fadeIn(1000);
-      }, 5600);
+  setTimeout(function () {
+    $(".content").fadeIn(1000);
+    $("#projectsHeader").fadeIn(1000);
+  }, 6200);
 
 
 
@@ -97,9 +100,13 @@ $('html, body').css({
 });
 }
 
+
+/*
 lockScroll();
 setTimeout(unlockScroll, 10000);
-/*
+
+
+
 setTimeout(function (){
   if($(window).width() <= 463){
     $('body').css({'background-size': '150%'});
