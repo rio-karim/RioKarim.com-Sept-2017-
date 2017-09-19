@@ -27,7 +27,7 @@ $(function() {
 
   setTimeout(function () {
       $("#loadingLine").fadeOut(200);
-  }, 2650);
+  }, 1000);
 
 
   setTimeout(function () {
@@ -69,17 +69,15 @@ $(function() {
 
   $(function () {
       $('#loadingLine').animate({
-            "left" : "+=100px"
+            left : "100"
         }, 500).animate({
-          "left" : "-=200px"
+          left : "-100"
         }, 500).animate({
-            "left" : "+=200px"
+            left : "100"
         }, 500).animate({
-          "left" : "-=200px"
+          left : "-100"
         }, 500).animate({
-            "left" : "+=200px"
-        }, 500).animate({
-          "left" : "-=200px"
+            left : "100"
         }, 500);
     });
 
