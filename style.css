@@ -5,7 +5,11 @@
 }
 
 body {
-
+  background-image:url(css/slide1.jpg);
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-size:100%;
+  	background-attachment:fixed;
 }
 
 /* HEADER */
@@ -16,7 +20,7 @@ body {
     height: 10vw;
     margin: auto;
     margin-top:3vh;
-
+    background-image:none;
     opacity: .90;
     border-radius: 1vw;
 }
@@ -60,9 +64,15 @@ body {
 	box-shadow:         0 6px 4px -5px #ccc;
 }
 
+#skill6 {
+
+  height:50.5%;
+  margin-top:.5%;
+}
+
 
 /* Navigation */
-
+/*
 #navBar
 {
     position: absolute;
@@ -108,7 +118,7 @@ body {
     transition:1s;
 
 }
-
+*/
 
 
 /* Body */
@@ -125,7 +135,7 @@ body {
     color:#031626;
     border-radius: 1vw;
     line-height: 4vh;
-      visibility:hidden;
+    visibility:hidden;
 }
 #contactBox {
   height:50px;
@@ -199,4 +209,20 @@ body {
 	top:89%;
 	opacity:.6;
 	height:50px;
+}
+
+#slide2{
+
+  background-image:url(css/slide2.jpg);
+  background-size:100%;
+  margin-top:150px;
+  height:140vh;
+}
+
+#castShadow{
+  width:100%;
+  height:1px;
+  background-color:#FFFFFF;
+  margin-top:-1px;
+  box-shadow: 0px 5px 100px 100px #FFFFFF, 0px -5px 5px 5px #FFFFFF;
 }
