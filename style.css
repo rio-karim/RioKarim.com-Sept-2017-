@@ -1,7 +1,7 @@
 *{
-    margin:0;
-    padding:0;
-    font-family: Century Gothic, sans-serif;
+  margin:0;
+  padding:0;
+  font-family: Century Gothic, sans-serif;
 }
 
 body {
@@ -14,15 +14,14 @@ body {
 
 /* HEADER */
 
-#headerBox
-{
-    width: 80vw;
-    height: 10vw;
-    margin: auto;
-    margin-top:3vh;
-    background-image:none;
-    opacity: .90;
-    border-radius: 1vw;
+#headerBox {
+  width: 80vw;
+  height: 10vw;
+  margin: auto;
+  margin-top:3vh;
+  background-image:none;
+  opacity: .90;
+  border-radius: 1vw;
 }
 
 #myName {
@@ -54,7 +53,6 @@ CHANGE TO VH / VW
 CHANGE TO VH / VW
 */
 #skillsBar {
-
 	width:50vw;
 	text-align:center;
 	margin:auto;
@@ -64,51 +62,45 @@ CHANGE TO VH / VW
 
 
 .skillsImg {
-
 	display:none;
 	height:50%;
 	margin-left:2.5%;
 	margin-right:2.5%;
-	box-shadow:         0 6px 4px -5px #ccc;
+	box-shadow: 0 6px 4px -5px #ccc;
 }
 
 #skill6 {
-
   height:50.5%;
   margin-top:.5%;
 }
 
 /* Body */
 
-
 #mainbox {
-
-	 width: 55vw;
-    height: 15vw;
-    margin: auto;
-    margin-top: 9vw;
-    text-align:justify;
-    text-justify: inter-word;
-    color:#031626;
-    border-radius: 1vw;
-    line-height: 4vh;
-    visibility:hidden;
+  width: 55vw;
+  height: 15vw;
+  margin: auto;
+  margin-top: 9vw;
+  text-align:justify;
+  text-justify: inter-word;
+  color:#031626;
+  border-radius: 1vw;
+  line-height: 4vh;
+  visibility:hidden;
 }
 
 /*
 --- TODO ---
 CHANGE TO VH / VW
 */
+
 #contactBox {
   height:50px;
   width:295.5px;
-  text-align:center
-  display:inline-block;
+  text-align:center;
   margin:auto;
-  margin-top:4%;
+  margin-top:32px;
   visibility:hidden;
-
-
 }
 
 /*
@@ -116,14 +108,15 @@ CHANGE TO VH / VW
 FIX MARGINS
 */
 #contactBtn {
-
   display:inline-block;
   border-radius:4px;
   text-align:center;
+  line-height:19px;
   padding-left:32px;
-  height:34px;
+  height:20px;
   width:80px;
-  padding-top:8px;
+  padding-top:10px;
+  padding-bottom:10px;
   margin-left:5%;
   margin-right:5%;
 }
@@ -135,41 +128,37 @@ FIX MARGIN
 #contactImg {
   position:absolute;
   margin-left: -36px;
-  margin-top:-.15%;
+  margin-top:-4px;
   height: 28px;
 }
 
-.googleBtn{
-
+.googleBtn {
   border: 2px solid #c6463f;
   color:#c6463f;
   border-color:#c6463f;
-    opacity:.4;
+  opacity:.4;
 
 }
 
-.gitBtn{
+.gitBtn {
   border: 2px solid #0026B6;
   color:#0026B6;
   border-color:#0026B6;
-    opacity:.4;
+  opacity:.4;
 }
 
-.gitBtn:hover{
+.gitBtn:hover {
   box-shadow: 0 0 8px 1px #0026B6, 0 0 2px 1px #FFFFFF;
   opacity:1;
   transition:1.4s;
-
 }
 
-.googleBtn:hover{
+.googleBtn:hover {
 
   box-shadow: 0 0 8px 1px #c6463f, 0 0 2px 1px #FFFFFF;
   opacity:1;
   transition:1.4s;
 }
-
-
 
 /*
 --- TODO ---
@@ -177,8 +166,8 @@ CHANGE TO VH / VW
 OR
 MAKE RESPONSIVE
 */
-#scrollArrow {
 
+#scrollArrow {
 	visibility:hidden;
 	position:absolute;
 	left:48.2%;
