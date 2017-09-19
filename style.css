@@ -97,7 +97,23 @@ body {
   visibility:hidden;
 }
 
-#contactBtn {
+
+#googleBtn {
+  border: 2px solid #c6463f;
+  color:#c6463f;
+  border-color:#c6463f;
+  opacity:.4;
+
+}
+
+#gitBtn {
+  border: 2px solid #0026B6;
+  color:#0026B6;
+  border-color:#0026B6;
+  opacity:.4;
+}
+
+.contactBtn {
   display:inline-block;
   border-radius:4px;
   text-align:center;
@@ -112,35 +128,21 @@ body {
 }
 
 
-#contactImg {
+.contactImg {
   position:absolute;
   margin-left: -36px;
   margin-top:-4px;
   height: 28px;
 }
 
-.googleBtn {
-  border: 2px solid #c6463f;
-  color:#c6463f;
-  border-color:#c6463f;
-  opacity:.4;
 
-}
-
-.gitBtn {
-  border: 2px solid #0026B6;
-  color:#0026B6;
-  border-color:#0026B6;
-  opacity:.4;
-}
-
-.gitBtn:hover {
+#gitBtn:hover {
   box-shadow: 0 0 8px 1px #0026B6, 0 0 2px 1px #FFFFFF;
   opacity:1;
   transition:1.4s;
 }
 
-.googleBtn:hover {
+#googleBtn:hover {
 
   box-shadow: 0 0 8px 1px #c6463f, 0 0 2px 1px #FFFFFF;
   opacity:1;
@@ -356,7 +358,7 @@ body {
   height: 70px;
 }
 
-#vegasproImg{
+.vegasproImg{
   border-radius:15px;
   margin-left:8px;
 }
