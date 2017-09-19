@@ -38,10 +38,6 @@ $(function() {
       $("#scrollArrow").fadeIn(1000);
   }, 5600);
 
-  setTimeout(function () {
-      $("#slide2").fadeIn(1000);
-  }, 4500);
-
 
       setTimeout(function () {
               $("#contactBox").fadeIn(1000);
