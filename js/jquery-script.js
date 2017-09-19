@@ -12,6 +12,7 @@ $(function() {
   $('#mainbox').fadeOut(1).css({'visibility': 'visible'});
   $('#contactBox').fadeOut(1).css({'visibility': 'visible'});
   $('#scrollArrow').fadeOut(1).css({'visibility': 'visible'});
+  $('#slide2').fadeOut(1).css({'visibility': 'visible'});
 
   setTimeout(		function (){
     for (var i = 1; i < 9; i++){
@@ -36,6 +37,10 @@ $(function() {
   setTimeout(function () {
       $("#scrollArrow").fadeIn(1000);
   }, 5600);
+
+  setTimeout(function () {
+      $("#slide2").fadeIn(1000);
+  }, 4500);
 
 
       setTimeout(function () {
