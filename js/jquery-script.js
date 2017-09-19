@@ -9,7 +9,7 @@ $(function() {
 
   $('#myName').fadeOut(1).css({'opacity': 1});
   $('#myName').fadeIn(5000);
-  $('#mainbox').fadeOut(1).css({'visibility': 'visible'});
+  $('#mainBox').fadeOut(1).css({'visibility': 'visible'});
   $('#contactBox').fadeOut(1).css({'visibility': 'visible'});
   $('#scrollArrow').fadeOut(1).css({'visibility': 'visible'});
   $('#slide2').fadeOut(1).css({'visibility': 'visible'});
@@ -17,7 +17,7 @@ $(function() {
   setTimeout(		function (){
     for (var i = 1; i < 9; i++){
       if (i == 1) {
-        $('#skillsBar').css({'opacity': 1});
+        $('#skillsBox').css({'opacity': 1});
       }
       $('#skill'+i).fadeOut(1)
       $('#skill'+i).fadeIn((i*1000)/2);
@@ -31,7 +31,7 @@ $(function() {
 
 
   setTimeout(function () {
-      $("#mainbox").fadeIn(1000);
+      $("#mainBox").fadeIn(1000);
   }, 4240);
 
   setTimeout(function () {
@@ -43,12 +43,14 @@ $(function() {
               $("#contactBox").fadeIn(1000);
       }, 5600);
 
+
+
   setTimeout(function () {for (var i = 0; i < 3; i++){
     $('#scrollArrow').animate({
-            "top" : "+=5px"
-        }, 500).animate({
-          "top" : "-=5px"
-        }, 500);
+      bottom: "10"
+    }, 500).animate({
+      bottom: "5"
+    }, 500);
       }
   }, 5800);
 
@@ -99,7 +101,7 @@ $('html, body').css({
 }
 
 lockScroll();
-setTimeout(unlockScroll, 9000);
+setTimeout(unlockScroll, 10000);
 
 
 });

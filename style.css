@@ -15,6 +15,7 @@ body {
 /* HEADER */
 
 #headerBox {
+  position:relative;
   width: 80vw;
   height: 10vw;
   margin: auto;
@@ -52,7 +53,8 @@ CHANGE TO VH / VW
 --- TODO ---
 CHANGE TO VH / VW
 */
-#skillsBar {
+#skillsBox {
+  position:relative;
 	width:50vw;
 	text-align:center;
 	margin:auto;
@@ -76,7 +78,8 @@ CHANGE TO VH / VW
 
 /* Body */
 
-#mainbox {
+#mainBox {
+  position:relative;
   width: 55vw;
   height: 15vw;
   margin: auto;
@@ -95,6 +98,7 @@ CHANGE TO VH / VW
 */
 
 #contactBox {
+  position:relative;
   height:50px;
   width:295.5px;
   text-align:center;
@@ -167,11 +171,17 @@ OR
 MAKE RESPONSIVE
 */
 
+
 #scrollArrow {
-	visibility:hidden;
-	position:absolute;
-	left:48.2%;
-	top:89%;
-	opacity:.6;
-	height:50px;
+  position:absolute;
+  bottom:5;
+  visibility:hidden;
+  opacity:.6;
+  display:block;
+  margin:0 auto;
+	height:40px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
