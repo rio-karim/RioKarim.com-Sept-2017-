@@ -9,15 +9,14 @@ $(function() {
 
   $('#myName').fadeOut(1).css({'opacity': 1});
   $('#myName').fadeIn(5000);
-  $('#mainBox').fadeOut(1).css({'visibility': 'visible'});
-  $('#contactBox').fadeOut(1).css({'visibility': 'visible'});
+  $('#personalBar').fadeOut(1).css({'visibility': 'visible'});
+  $('#contactBar').fadeOut(1).css({'visibility': 'visible'});
   $('#scrollArrow').fadeOut(1).css({'visibility': 'visible'});
-  $('#slide2').fadeOut(1).css({'visibility': 'visible'});
 
   setTimeout(		function (){
     for (var i = 1; i < 9; i++){
       if (i == 1) {
-        $('#skillsBox').css({'opacity': 1});
+        $('#skillsBar').css({'opacity': 1});
       }
       $('#skill'+i).fadeOut(1)
       $('#skill'+i).fadeIn((i*1000)/2);
@@ -31,7 +30,7 @@ $(function() {
 
 
   setTimeout(function () {
-      $("#mainBox").fadeIn(1000);
+      $("#personalBar").fadeIn(1000);
   }, 4240);
 
   setTimeout(function () {
@@ -40,14 +39,14 @@ $(function() {
 
 
       setTimeout(function () {
-              $("#contactBox").fadeIn(1000);
+              $("#contactBar").fadeIn(1000);
       }, 5600);
 
 
 
   setTimeout(function () {for (var i = 0; i < 3; i++){
     $('#scrollArrow').animate({
-      bottom: "10"
+      bottom: "8"
     }, 500).animate({
       bottom: "5"
     }, 500);
@@ -100,6 +99,12 @@ $('html, body').css({
 
 lockScroll();
 setTimeout(unlockScroll, 10000);
+/*
+setTimeout(function (){
+  if($(window).width() <= 463){
+    $('body').css({'background-size': '150%'});
+  }
+}, 4200);*/
 
 
 });
