@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image:url(css/slide1.jpg);
+  /*background-image:url(css/slide1.jpg);*/
   background-repeat: no-repeat;
   background-blend-mode: lighten;
   background-size:100%;
@@ -35,8 +35,9 @@ body {
 }
 
 #loadingLine {
+  visibility: hidden;
   position: relative;
-  margin-top:5vw;
+  margin-top:200px;
   margin-left: auto;
   margin-right: auto;
   width:50vw;
@@ -150,9 +151,8 @@ body {
 }
 
 #scrollArrow {
-  z-index: 2;
   position:absolute;
-  bottom:5;
+  bottom:5px;
   visibility:hidden;
   opacity:.6;
   display:block;
@@ -173,9 +173,9 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-  height:6px;
+  height:3px;
   bottom:0;
-  box-shadow:  0px -5px 12px 12px #FFFFFF;
+  box-shadow:  0px -3px 12px 12px #FFFFFF;
 
 }
 
@@ -383,6 +383,15 @@ body {
   #personalIntro {
     width:97%;
   }
+
+  #fadeBar{
+    visibility:visible;
+}
+
+#scrollArrow {
+
+  height:20px;
+
 }
 
 @media only screen and (max-width: 590px) {
@@ -398,6 +407,7 @@ body {
     }
 
     #myName {
+      visibility:none;
       font-size:70px;
     }
 
@@ -452,7 +462,6 @@ body {
 
   #scrollArrow {
 
-    bottom:-2;
     height:15px;
 
   }
