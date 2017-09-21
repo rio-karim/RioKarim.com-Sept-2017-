@@ -509,7 +509,7 @@ body {
 
   .introBox .projectsHeader {
 
-    margin-top    : 190px;
+    margin-top    : 270px;
 }
 
 @media only screen
@@ -527,6 +527,21 @@ body {
     margin-left  : 1%;
     margin-right : 1%;
   }
+}
+
+@media only screen
+       and (max-width : 350px) {
+
+         .introBox .personalBar .contactBar span{
+            margin-top:10%;
+         }
+
+         .introBox .projectsHeader {
+
+           margin-top    : 380px;
+       }
+
+
 }
 
 @media only screen
