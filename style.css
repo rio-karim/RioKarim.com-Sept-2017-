@@ -9,13 +9,13 @@ body {
   background-attachment : fixed;
   background-repeat     : no-repeat;
   background-size       : 100%;
-  /* background-image:url(css/slide1.jpg); */
   height                : 100%;
+  /* background-image:url(css/slide1.jpg); */
 }
 
 /* HEADER */
 
-#introBox {
+.introBox {
   background-image : none;
   height           : 10vw;
   margin           : auto;
@@ -25,7 +25,7 @@ body {
   width            : 100%;
 }
 
-#myName {
+.introBox .myName {
   color      : #031626;
   font-size  : 96px;
   margin     : auto;
@@ -33,7 +33,7 @@ body {
   text-align : center;
 }
 
-#loadingLine {
+.introBox .loadingLine {
   background-color : #031626;
   border-radius    : 5px;
   height           : .4vw;
@@ -46,7 +46,7 @@ body {
   width            : 50vw;
 }
 
-#skillsBar {
+.introBox .skillsBar {
   float      : left;
   margin     : auto;
   margin-top : 2%;
@@ -56,7 +56,7 @@ body {
   width      : 100%;
 }
 
-.skillsImg {
+.introBox .skillsBar .skillsImg {
   box-shadow   : 0 6px 4px -5px #ccc;
   display      : none;
   height       : 68.5px;
@@ -66,7 +66,7 @@ body {
 
 /* Body */
 
-#personalBar {
+.introBox .personalBar {
   color        : #031626;
   float        : left;
   font-size    : 16px;
@@ -81,12 +81,12 @@ body {
   width        : 100%;
 }
 
-#personalIntro {
+.introBox .personalBar .personalIntro {
   margin : auto;
   width  : 780px;
 }
 
-#contactBar {
+.introBox .personalBar .contactBar {
   height     : 50px;
   margin     : auto;
   margin-top : 32px;
@@ -96,27 +96,17 @@ body {
   width      : 100%;
 }
 
-#googleBtn {
-  border       : 2px solid #c6463f;
-  border-color : #c6463f;
-  color        : #c6463f;
-  opacity      : .4;
-}
-
-#gitBtn {
-  border       : 2px solid #0026B6;
-  border-color : #0026B6;
-  color        : #0026B6;
-  opacity      : .4;
-}
-
-.contactBtn {
+.introBox .personalBar .contactBar .contactGit {
+  border         : 2px solid #0026B6;
+  border-color   : #0026B6;
   border-radius  : 4px;
+  color          : #0026B6;
   display        : inline-block;
   height         : 20px;
   line-height    : 19px;
   margin-left    : 5%;
   margin-right   : 5%;
+  opacity        : .4;
   padding-bottom : 10px;
   padding-left   : 32px;
   padding-top    : 10px;
@@ -124,56 +114,46 @@ body {
   width          : 80px;
 }
 
-.contactImg {
+.introBox .personalBar .contactBar .contactMail {
+  border         : 2px solid #c6463f;
+  border-color   : #c6463f;
+  border-radius  : 4px;
+  color          : #c6463f;
+  display        : inline-block;
+  height         : 20px;
+  line-height    : 19px;
+  margin-left    : 5%;
+  margin-right   : 5%;
+  opacity        : .4;
+  padding-bottom : 10px;
+  padding-left   : 32px;
+  padding-top    : 10px;
+  text-align     : center;
+  width          : 80px;
+}
+
+.introBox .personalBar .contactBar .contactImg {
   height      : 28px;
   margin-left : -36px;
   margin-top  : -4px;
   position    : absolute;
 }
 
-#gitBtn:hover {
+.introBox .personalBar .contactBar .contactGit:hover {
   box-shadow : 0 0 8px 1px #0026B6,
                0 0 2px 1px #FFFFFF;
   opacity    : 1;
   transition : 1.4s;
 }
 
-#googleBtn:hover {
+.introBox .personalBar .contactBar .contactMail:hover {
   box-shadow : 0 0 8px 1px #c6463f,
                0 0 2px 1px #FFFFFF;
   opacity    : 1;
   transition : 1.4s;
 }
 
-#scrollArrow {
-  bottom       : 5px;
-  display      : block;
-  height       : 30px;
-  left         : 0;
-  margin       : 0 auto;
-  margin-left  : auto;
-  margin-right : auto;
-  opacity      : .6;
-  position     : absolute;
-  right        : 0;
-  visibility   : hidden;
-}
-
-#fadeBar {
-  background-color : #FFFFFF;
-  bottom           : 0;
-  box-shadow       : 0 -3px 12px 12px #FFFFFF;
-  height           : 3px;
-  left             : 0;
-  margin-left      : auto;
-  margin-right     : auto;
-  position         : fixed;
-  right            : 0;
-  visibility       : hidden;
-  width            : 100%;
-}
-
-#projectsHeader {
+.introBox .projectsHeader {
   color      : #031626;
   float      : left;
   font-size  : 25px;
@@ -183,7 +163,7 @@ body {
   width      : 100%;
 }
 
-#projectsUnderline {
+.introBox .projectsUnderline {
   background-color : #031626;
   border-radius    : 5px;
   height           : 4px;
@@ -208,172 +188,103 @@ body {
   width          : 96%;
 }
 
-.contentImg {
+.content:nth-of-type(5) {
+  padding-bottom : 180px;
+}
+
+.content:nth-of-type(6) {
+  border-bottom : none;
+}
+
+.content .contentLE_Left {
+  float      : left;
+  text-align : center;
+  width      : 45%;
+}
+
+.content .contentImg {
   border-radius : 10px;
-  width         : 100%;
+  display       : block;
+  height        : auto;
+  margin        : auto;
+  max-width     : 450px;
 }
 
-#articleL1_Left {
-  float      : left;
-  height     : 100%;
-  text-align : center;
-  width      : 45%;
-}
-
-#articleL1_Left img {
-  display   : block;
-  height    : auto;
-  margin    : auto;
-  max-width : 450px;
-}
-
-#articleL1_Right {
+.content .contentLE_Right {
   height        : 100%;
   margin-left   : 45%;
   padding-left  : 30px;
   padding-right : 30px;
 }
 
-#articleL1_Learnt {
+.content .contentLE_Learnt {
   margin-top : 50px;
   text-align : center;
 }
 
-#articleL1_Learnt img {
+.content .contentLE_Learnt img {
   height : 70px;
 }
 
-#articleR1_Left {
+.content .contentRI_Left {
   height        : 100%;
   margin-right  : 45%;
   padding-left  : 30px;
   padding-right : 30px;
 }
 
-#articleR1_Right {
+.content .contentRI_Right {
   float      : right;
-  height     : 100%;
   text-align : center;
   width      : 45%;
 }
 
-#articleR1_Right img {
-  display   : block;
-  height    : auto;
-  margin    : auto;
-  max-width : 450px;
-}
-
-#articleR1_Learnt {
+.content .contentRI_Learnt {
   margin-top : 50px;
   text-align : center;
 }
 
-#articleR1_Learnt img {
+.content .contentRI_Learnt img {
   height : 70px;
 }
 
-#articleL2_Left {
-  float      : left;
-  height     : 100%;
-  text-align : center;
-  width      : 45%;
-}
-
-#articleL2_Left img {
-  display   : block;
-  height    : auto;
-  margin    : auto;
-  max-width : 450px;
-}
-
-#articleL2_Right {
-  height        : 100%;
-  margin-left   : 45%;
-  padding-left  : 30px;
-  padding-right : 30px;
-}
-
-#articleL2_Learnt {
-  margin-top : 50px;
-  text-align : center;
-}
-
-#articleL2_Learnt img {
-  height : 70px;
-}
-
-#articleR2 {
-  padding-bottom : 150px;
-}
-
-#articleR2_Left {
-  height        : 100%;
-  margin-right  : 45%;
-  padding-left  : 30px;
-  padding-right : 30px;
-}
-
-#articleR2_Right {
-  float      : right;
-  height     : 100%;
-  text-align : center;
-  width      : 45%;
-}
-
-#articleR2_Right img {
-  display   : block;
-  height    : auto;
-  margin    : auto;
-  max-width : 400px;
-}
-
-#articleR2_Learnt {
-  margin-top : 50px;
-  text-align : center;
-}
-
-#articleR2_Learnt img {
-  height : 70px;
-}
-
-.vegasproImg {
+.content .vegasproImg {
   border-radius : 15px;
   margin-left   : 8px;
 }
 
-#articleL3_Left {
+.content .contentCE_Left {
   display    : inline-block;
   padding    : 4.5%;
   text-align : justify;
   width      : 40%;
 }
 
-#articleL3_Right {
+.content .contentCE_Right {
   display    : inline-block;
   padding    : 4.5%;
   text-align : justify;
   width      : 40%;
 }
 
-.articleL3_Learnt {
+.content .contentCE_Learnt {
   margin-bottom : 40px;
   margin-top    : 40px;
   text-align    : center;
 }
 
-.articleL3_Learnt img {
+.content .contentCE_Learnt img {
   height : 70px;
 }
 
-.L3_img {
+.content .contentCE_img {
   display     : inline-block;
   height      : auto;
   padding-top : 40px;
   width       : 100%;
 }
 
-.L3_img img {
+.content .contentCE_img img {
   border-radius : 10px;
   display       : block;
   height        : auto;
@@ -381,7 +292,7 @@ body {
   max-width     : 400px;
 }
 
-#otherHeader {
+.content .contentCEHeader {
   color       : #031626;
   float       : left;
   font-size   : 20px;
@@ -389,7 +300,7 @@ body {
   text-align  : center;
 }
 
-#otherUnderline {
+.content .contentCEUnderline {
   background-color : #031626;
   border-radius    : 5px;
   height           : 4px;
@@ -409,29 +320,29 @@ body {
 
 @media only screen
        and (max-width : 885px) {
-  #otherHeader {
+  .content .contentCEHeader {
     margin-left : 5%;
   }
 
-  #otherUnderline {
+  .content .contentCEUnderline {
     margin-left : 5%;
   }
 
-  #articleL3_Left {
+  .content .contentCE_Left {
     display    : inline-block;
     padding    : 8%;
     text-align : justify;
     width      : 33%;
   }
 
-  #articleL3_Right {
+  .content .contentCE_Right {
     display    : inline-block;
     padding    : 8%;
     text-align : justify;
     width      : 33%;
   }
 
-  .L3_img img {
+  .content .contentCE_img img {
     border-radius : 10px;
     display       : block;
     height        : auto;
@@ -442,57 +353,85 @@ body {
 
 @media only screen
        and (max-width : 825px) {
-  #personalBar {
+  .introBox .personalBar {
     font-size   : 16px;
     line-height : 24px;
     width       : 97%;
   }
 
-  #personalIntro {
+  .introBox .personalBar .personalIntro {
     width : 97%;
   }
 
-  #fadeBar {
+  .fadeBar {
     visibility : visible;
   }
 
-  #scrollArrow {
+  .scrollArrow {
     height : 20px;
   }
 }
 
 @media only screen
        and (max-width : 762px) {
-  #otherHeader {
+  .content .contentCEHeader {
     width : 90%;
   }
 
-  #otherUnderline {
+  .content .contentCEUnderline {
     margin-left  : auto;
     margin-right : auto;
   }
 
-  #articleL3_Left {
+  .content .contentCE_Left {
     display    : inline-block;
     padding    : 8%;
     text-align : justify;
     width      : 90%;
   }
 
-  #articleL3_Right {
+  .content .contentCE_Right {
     display    : inline-block;
     padding    : 8%;
     text-align : justify;
     width      : 90%;
   }
 
-  .L3_img img {
+  .content .contentCE_img img {
     border-radius : 10px;
     display       : block;
     height        : auto;
     margin        : auto;
     max-width     : 300px;
   }
+}
+
+.scrollArrow {
+  bottom       : 5px;
+  display      : block;
+  height       : 30px;
+  left         : 0;
+  margin       : 0 auto;
+  margin-left  : auto;
+  margin-right : auto;
+  opacity      : .6;
+  position     : absolute;
+  right        : 0;
+  visibility   : hidden;
+}
+
+.fadeBar {
+  background-color : #FFFFFF;
+  bottom           : 0;
+  box-shadow       : 0 -3px 12px 12px #FFFFFF;
+  height           : 3px;
+  left             : 0;
+  margin-left      : auto;
+  margin-right     : auto;
+  position         : fixed;
+  right            : 0;
+  visibility       : hidden;
+  width            : 100%;
 }
 
 @media only screen
@@ -508,15 +447,15 @@ body {
     background-size : 250%;
   }
 
-  #myName {
+  .introBox .myName {
     font-size : 70px;
   }
 
-  .skillsImg {
+  .introBox .skillsBar .skillsImg {
     height : 45px;
   }
 
-  #personalBar {
+  .introBox .personalBar {
     font-family : serif;
     font-size   : 14px;
     line-height : 26px;
@@ -537,15 +476,15 @@ body {
   * 150%; } }
   */
 
-  #myName {
+  .introBox .myName {
     font-size : 60px;
   }
 
-  #contactBtn {
+  .contactBtn {
     background-color : white;
   }
 
-  #personalBar {
+  .introBox .personalBar {
     padding-bottom : 20px;
     padding-left   : 3px;
     width          : 97%;
@@ -554,23 +493,23 @@ body {
 
 @media only screen
        and (max-width : 398px) {
-  #scrollArrow {
+  .scrollArrow {
     height : 15px;
   }
 }
 
 @media only screen
        and (max-width : 398px) {
-  #myName {
+  .introBox .myName {
     font-size : 45px;
   }
 
-  .skillsImg {
+  .introBox .skillsBar .skillsImg {
     margin-left  : 8%;
     margin-right : 8%;
   }
 
-  #contactBtn {
+  .contactBtn {
     margin-left  : 1%;
     margin-right : 1%;
   }
@@ -578,7 +517,7 @@ body {
 
 @media only screen
        and (max-width : 322px) {
-  #scrollArrow {
+  .scrollArrow {
     left         : 180;
     margin-left  : auto;
     margin-right : auto;
