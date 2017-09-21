@@ -189,7 +189,7 @@ body {
 }
 
 .content:nth-of-type(5) {
-  padding-bottom : 180px;
+  padding-bottom : 13vw;
 }
 
 .content:nth-of-type(6) {
@@ -208,6 +208,7 @@ body {
   height        : auto;
   margin        : auto;
   max-width     : 450px;
+  width         : 80%;
 }
 
 .content .contentLE_Right {
@@ -217,12 +218,12 @@ body {
   padding-right : 30px;
 }
 
-.content .contentLE_Learnt {
+.content .content_Learnt {
   margin-top : 50px;
   text-align : center;
 }
 
-.content .contentLE_Learnt img {
+.content .content_Learnt img {
   height : 70px;
 }
 
@@ -237,15 +238,6 @@ body {
   float      : right;
   text-align : center;
   width      : 45%;
-}
-
-.content .contentRI_Learnt {
-  margin-top : 50px;
-  text-align : center;
-}
-
-.content .contentRI_Learnt img {
-  height : 70px;
 }
 
 .content .vegasproImg {
@@ -265,16 +257,6 @@ body {
   padding    : 4.5%;
   text-align : justify;
   width      : 40%;
-}
-
-.content .contentCE_Learnt {
-  margin-bottom : 40px;
-  margin-top    : 40px;
-  text-align    : center;
-}
-
-.content .contentCE_Learnt img {
-  height : 70px;
 }
 
 .content .contentCE_img {
@@ -309,13 +291,32 @@ body {
   width            : 272px;
 }
 
-@media only screen
-       and (max-width : 1050px) {
-  /* BACKGROUND RESPONSIVE */
+.scrollArrow {
+  bottom       : 5px;
+  display      : block;
+  height       : 30px;
+  left         : 0;
+  margin       : 0 auto;
+  margin-left  : auto;
+  margin-right : auto;
+  opacity      : .6;
+  position     : fixed;
+  right        : 0;
+  visibility   : hidden;
+}
 
-  body {
-    background-size : 200%;
-  }
+.fadeBar {
+  background-color : #FFFFFF;
+  bottom           : 0;
+  box-shadow       : 0 -3px 12px 12px #FFFFFF;
+  height           : 3px;
+  left             : 0;
+  margin-left      : auto;
+  margin-right     : auto;
+  position         : fixed;
+  right            : 0;
+  visibility       : hidden;
+  width            : 100%;
 }
 
 @media only screen
@@ -360,7 +361,7 @@ body {
   }
 
   .introBox .personalBar .personalIntro {
-    width : 97%;
+    width : 87%;
   }
 
   .fadeBar {
@@ -386,15 +387,15 @@ body {
   .content .contentCE_Left {
     display    : inline-block;
     padding    : 8%;
-    text-align : justify;
-    width      : 90%;
+    text-align : center;
+    width      : 85%;
   }
 
   .content .contentCE_Right {
     display    : inline-block;
     padding    : 8%;
-    text-align : justify;
-    width      : 90%;
+    text-align : center;
+    width      : 85%;
   }
 
   .content .contentCE_img img {
@@ -406,49 +407,51 @@ body {
   }
 }
 
-.scrollArrow {
-  bottom       : 5px;
-  display      : block;
-  height       : 30px;
-  left         : 0;
-  margin       : 0 auto;
-  margin-left  : auto;
-  margin-right : auto;
-  opacity      : .6;
-  position     : absolute;
-  right        : 0;
-  visibility   : hidden;
-}
-
-.fadeBar {
-  background-color : #FFFFFF;
-  bottom           : 0;
-  box-shadow       : 0 -3px 12px 12px #FFFFFF;
-  height           : 3px;
-  left             : 0;
-  margin-left      : auto;
-  margin-right     : auto;
-  position         : fixed;
-  right            : 0;
-  visibility       : hidden;
-  width            : 100%;
-}
-
 @media only screen
-       and (max-width : 590px) {
-  body {
-    background-size : 250%;
+       and (max-width : 650px) {
+  .content {
+    display    : table;
+    text-align : center;
+  }
+
+  .content:nth-of-type(5) {
+    padding-bottom : 20%;
+  }
+
+  .content .contentLE_Left {
+    display    : table-footer-group;
+    margin-top : 15%;
+    width      : 100%;
+  }
+
+  .content .contentLE_Right {
+    display : table-header-group;
+  }
+
+  .content .contentRI_Left {
+    display      : table-header-group;
+    margin-left  : 5%;
+    margin-right : 0;
+    padding      : 0;
+    width        : 90%;
+  }
+
+  .content .contentRI_Right {
+    display    : table-footer-group;
+    margin-top : 15%;
+    width      : 100%;
+  }
+
+  .content .content_Learnt img {
+    max-height : 55px;
+    width      : auto;
   }
 }
 
 @media only screen
        and (max-width : 563px) {
-  body {
-    background-size : 250%;
-  }
-
   .introBox .myName {
-    font-size : 70px;
+    font-size : 60px;
   }
 
   .introBox .skillsBar .skillsImg {
@@ -465,15 +468,10 @@ body {
 
 @media only screen
        and (max-width : 463px) {
-  body {
-    background-image : none;
-  }
   /**
   * body{ background-image: url(css/mobilewp.jpg); background-size:100%;
-  * animation: animateBg forwards 2s 3s ease-in-out; }
-  *
-  * @keyframes animateBg{ from { background-size: 100%; } to { background-size:
-  * 150%; } }
+  * animation: animateBg forwards 2s 3s ease-in-out; } @keyframes animateBg{
+  * from { background-size: 100%; } to { background-size: 150%; } }
   */
 
   .introBox .myName {
@@ -489,13 +487,28 @@ body {
     padding-left   : 3px;
     width          : 97%;
   }
+
+  .introBox .projectsHeader {
+    font-size     : 20px;
+    margin-bottom : -40px;
+    margin-top    : 170px;
+    width         : 100%;
+  }
+
+  .introBox .projectsUnderline {
+    width : 300px;
+  }
 }
 
 @media only screen
        and (max-width : 398px) {
   .scrollArrow {
-    height : 15px;
+    height : 18px;
   }
+
+  .introBox .projectsHeader {
+
+    margin-top    : 190px;
 }
 
 @media only screen
