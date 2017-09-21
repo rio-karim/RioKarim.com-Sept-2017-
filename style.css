@@ -403,7 +403,8 @@ body {
     display       : block;
     height        : auto;
     margin        : auto;
-    max-width     : 300px;
+    margin-left:-4%;
+    max-width     : 280px;
   }
 }
 
