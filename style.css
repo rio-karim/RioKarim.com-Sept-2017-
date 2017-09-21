@@ -382,7 +382,6 @@ body {
 }
 
 #articleL3_Left{
-
   text-align: justify;
   display:inline-block;
       width:40%;
@@ -391,25 +390,60 @@ body {
 }
 
 #articleL3_Right{
+
     text-align: justify;
     display:inline-block;
       width:40%;
       padding:4.5%;
 }
 
-#articleL3_Learnt{
-  margin-top:-40px;
+.articleL3_Learnt{
+  margin-top:40px;
   margin-bottom:40px;
   text-align:center;
 }
 
-#articleL3_Learnt img {
+.articleL3_Learnt img {
 
   height: 70px;
 }
 
+.L3_img {
+  padding-top:40px;
+  display:inline-block;
+  width:100%;
+  height:auto;
+}
+
+.L3_img img{
+  margin:auto;
+  max-width:400px;
+  height:auto;
+  display:block;
+  border-radius:10px;
+}
 
 
+#otherHeader{
+
+    float:left;
+    margin-left:10%;
+    font-size: 25px;
+    text-align:center;
+    color:#031626;
+    font-size:20px;
+}
+
+#otherUnderline{
+
+  margin-left:10%;
+  margin-top:43px;
+  width:272px;
+  height:4px;
+  border-radius: 5px;
+  background-color: #031626;
+
+}
 
 @media only screen and (max-width: 1050px){
 
@@ -417,7 +451,42 @@ body {
   body{
     background-size:200%;
   }
+}
 
+@media only screen and (max-width: 885px) {
+
+  #otherHeader{
+    margin-left:5%;
+  }
+
+  #otherUnderline{
+    margin-left:5%;
+  }
+  #articleL3_Left{
+    text-align: justify;
+    display:inline-block;
+        width:33%;
+        padding:8%;
+
+  }
+
+  #articleL3_Right{
+
+      text-align: justify;
+      display:inline-block;
+        width:33%;
+        padding:8%;
+  }
+
+  .L3_img img{
+  margin:auto;
+  max-width:300px;
+  height:auto;
+  display:block;
+  border-radius:10px;
+}
+
+}
 @media only screen and (max-width: 825px){
 
 
@@ -440,13 +509,50 @@ body {
   height:20px;
 
 }
+}
+
+@media only screen and (max-width: 762px) {
+
+  #otherHeader{
+    width:90%;
+  }
+
+  #otherUnderline{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  #articleL3_Left{
+    text-align: justify;
+    display:inline-block;
+        width:90%;
+        padding:8%;
+
+  }
+
+  #articleL3_Right{
+
+      text-align: justify;
+      display:inline-block;
+        width:90%;
+        padding:8%;
+  }
+
+  .L3_img img{
+  margin:auto;
+  max-width:300px;
+  height:auto;
+  display:block;
+  border-radius:10px;
+}
+
+}
 
 @media only screen and (max-width: 590px) {
 
   body{
     background-size:250%;
   }
-
+}
   @media only screen and (max-width: 563px) {
 
     body{
@@ -511,6 +617,7 @@ body {
     height:15px;
 
   }
+}
 
 @media only screen and (max-width: 398px){
 
