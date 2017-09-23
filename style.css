@@ -15,17 +15,11 @@ body {
 
 /* HEADER */
 
-.introBox {
-  background-image : none;
-  height           : 10vw;
-  margin           : auto;
-  margin-top       : 3vh;
-  opacity          : .90;
-  position         : relative;
-  width            : 100%;
-}
 
 .introBox .myName {
+  width:100%;
+  height:120px;
+  display:inline-block;
   color      : #031626;
   font-size  : 96px;
   margin     : auto;
@@ -113,10 +107,45 @@ body {
   text-align     : center;
   width          : 90px;
 }
-
-.introBox .personalBar .contactBar .forkBtn{
-  width:160px;
+.header {
+  height:40px;
+  float:right;
+  width:100%;
+    visibility:none;
 }
+.header{
+visibility: hidden;
+}
+.forkBtn{
+  position:absolute;
+  width:160px;
+  right: 1%;
+  top:1%;
+  margin       : auto;
+  opacity      : .6;
+  cursor:pointer;
+  border-color   : #345863;
+  border-radius  : 4px;
+  color          : #345863;
+  line-height    : 35px;
+  opacity        : .4;
+  text-align     : right;
+  font-size:97%;
+  padding-right:9px;
+}
+.forkBtn img{
+  height      : 80%;
+  width:auto;
+  margin-left : -30px;
+  margin-top:4px;
+  position    : absolute;
+}
+
+.forkBtn:hover {
+  opacity    : 1;
+  transition : 1.4s;
+}
+
 
 .introBox .personalBar .contactBar .contactImg {
   height      : 28px;
@@ -167,11 +196,11 @@ body {
   width          : 96%;
 }
 
-.content:nth-of-type(5) {
+.content:nth-of-type(6) {
   padding-bottom : 13vw;
 }
 
-.content:nth-of-type(6) {
+.content:nth-of-type(7) {
   border-bottom : none;
 }
 
@@ -346,6 +375,7 @@ body {
   border-radius : 10px;
   height        : auto;
   margin        : auto;
+  margin-top:10%;
   text-align:center;
   width         : 100%;
 }
@@ -557,8 +587,18 @@ body {
 @media only screen
        and (max-width : 563px) {
   .introBox .myName {
+    margin-bottom:-35px;
     font-size : 60px;
   }
+
+  .forkBtn {
+    font-size:12px;
+  }
+         .forkBtn img {
+           height: 55%;
+           margin-left:-21px;
+           margin-top:7.5px;
+         }
 
   .introBox .skillsBar .skillsImg {
     height : 45px;
@@ -620,7 +660,9 @@ body {
 @media only screen
        and (max-width : 398px) {
   .introBox .myName {
-    font-size : 45px;
+    font-size : 47px;
+    margin-bottom:-50px;
+    margin-top:10px;
   }
 
   .introBox .skillsBar .skillsImg {

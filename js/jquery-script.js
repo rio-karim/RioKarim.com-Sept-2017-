@@ -1,33 +1,32 @@
-$(function() {
-
+$(function () {
+  /* VARIABLE DECLARATIONS */
   var filetype = '.png';
-  var filepath = 'images/screenshots/';
+  var filepath = 'css/gallery/';
   var filefolder = ['star/', 'spurs/', 'vue/', 'javaquiz/', 'javastock/', 'galactisee/'];
 
-  /* TODO
-  INPUT HOW MANY FILES ARE IN THE FOLDER, I.E folder 'star/' has 4 images
-  */
+  var fadeID = ['.loadingLine', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader'];
+  var fadeNUM = [200, 1000, 1000, 1000, 1000, 1000, 1000];
+  var timeoutNUM = [0, 6000, 4240, 6000, 6200, 6200];
   var filecount = [4, 6, 0, 6, 5, 0];
-  var fileNum = 1;
 
+  var clickCount = 0;
+
+  /* IMAGE GALLERY APPEND */
   function getGallery(ftype, fpath, folder, folderNum){
-      $(".thumbContainer").empty();
-      $(".selectedImg").empty();
-      for (var i = 1; i <= folderNum; i++){
-        $('<img />', {
-          class: 'imgThumb',
-          src: fpath + folder + i.toString() + ftype
-        }).appendTo(".thumbContainer");
-      };
+    $(".thumbContainer").empty();
+    $(".selectedImg").empty();
+    for (var i = 1; i <= folderNum; i++){
       $('<img />', {
-        class: 'mainImg',
-        src: fpath + folder + '1' + ftype
-      }).appendTo(".selectedImg");
+        class: 'imgThumb',
+        src: fpath + folder + i.toString() + ftype
+      }).appendTo(".thumbContainer");
+    };
+    $('<img />', {
+      class: 'mainImg',
+      src: fpath + folder + '1' + ftype
+    }).appendTo(".selectedImg");
   }
-
-  /* TODO
-  ADD / REMOVE A CASE FOR EVERY FOLDER YOU HAVE, GIVE THE FILEFOLDER AND FILENUM INDEX RELEVANT
-  */
+  /* CHANGE GALLERY TOPIC */
   function switchGallery(btn) {
     switch (btn){
       case 'StarWars': getGallery(filetype, filepath, filefolder[0], filecount[0])
@@ -44,69 +43,58 @@ $(function() {
                       break;
     }
   }
-
-
-
-/* GALLERY EVENTS SCRIPT */
-
-
-  function galleryEvents() {
-    $(".thumbContainer img").on({
+  /* GALLERY ACTION EVENTS */
+  function galleryEvents () {
+    $('.thumbContainer img').on({
       mouseover: function () {
         $(this).css({
           'cursor': 'pointer',
           'border-color': '#7f1a1c',
-          'transition' : '.7s'
+          'transition': '.7s'
         });
 
       },
       mouseout: function () {
         $(this).css({
           'cursor': 'default',
-          'border-color' : 'grey'
+          'border-color': 'grey'
         });
       },
-      click : function () {
-          var imageUrl = $(this).attr('src');
-          console.log($('.mainImg'));
-          $('.mainImg').removeAttr("id");
-          console.log($('.mainImg'));
-          $('.mainImg').fadeOut(1000, function () {
-            $(this).attr('id', 'selected');
-            $(this).attr('src', imageUrl);
-            console.log($(this));
+      click: function () {
+        var imageUrl = $(this).attr('src');
+        $('.mainImg').removeAttr("id");
+        $('.mainImg').fadeOut(1000, function () {
+          $(this).attr('id', 'selected');
+          $(this).attr('src', imageUrl);
           }).fadeIn(1000);
         }
     });
   }
-  /* GALLERY OPEN AND CLOSE SCRIPT */
-
+    /* GALLERY CLOSE */
     function closeWindow(e) {
-      $('.black_overlay').fadeToggle(function() {
+      $('.black_overlay').fadeToggle(function () {
         e.removeClass('opened');
       });
     }
-
-    $(function() {
-      $('.gallery').on('click', function() {
-          switchGallery(this.id);
-          galleryEvents();
-          $('closeBtn').addClass('opened');
-          $('.black_overlay').fadeToggle();
+    /* GALLERY OPEN */
+    $(function () {
+      $('.gallery').on('click', function () {
+        switchGallery(this.id);
+        galleryEvents();
+        $('closeBtn').addClass('opened');
+        $('.black_overlay').fadeToggle();
       });
-      $('.closeBtn').on('click', function() {
+      $('.closeBtn').on('click', function () {
         closeWindow($('.gallery'));
         return false;
       });
     });
 
-    $.fn.fadeToggle = function(easing, callback) {
+    $.fn.fadeToggle = function (easing, callback) {
       return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
     }
-
-/* CAROUSEL */
-    var clickCount = 0;
-    $(".nextarrow").click(function() {
+    /* GALLERY CAROUSEL */
+    $(".nextarrow").click(function () {
       clickCount += 1;
       var cycleNum = 1;
       var $selected = $("#selected").removeAttr("id");
@@ -123,72 +111,48 @@ $(function() {
 
 
 
-
-
-
-
-
-  /*
-  PAGE FADE FUNCTIONS
-  */
-
-  var fadeID = ['.loadingLine', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader']
-  var fadeNUM = [200, 1000, 1000, 1000, 1000, 1000, 1000]
-  var timeoutNUM = [0, 6000, 4240, 6000, 6200, 6200]
-  $('.myName').fadeOut(1).css({'opacity': 1})
+  /*  PAGE ANIMATIONS */
+  $('.myName').fadeOut(1).css({'opacity': 1});
+  $('.header').fadeOut(1).css({'visibility': 'visible'});
 
   function setVisible(stringID) {
-    $(stringID).fadeOut(1).css({'visibility': 'visible'})
+    $(stringID).fadeOut(1).css({'visibility': 'visible'});
   };
 
   function timeoutFadeIn(stringID, intFade, intTimeout) {
     setTimeout(function () {
-        $(stringID).fadeIn(intFade)
+        $(stringID).fadeIn(intFade);
     }, intTimeout)
   };
-
-
   for (var i = 0; i < fadeID.length; i++) {
-    setVisible(fadeID[i])
-    timeoutFadeIn(fadeID[i], fadeNUM[i], timeoutNUM[i])
+    setVisible(fadeID[i]);
+    timeoutFadeIn(fadeID[i], fadeNUM[i], timeoutNUM[i]);
   };
-
-/*
-SKILLBAR AND NAME FADE (SEPERATE FOR LOADING PURPOSES)
-*/
-
+  /* SKILLBAR AND NAME FADE (SEPERATE FOR LOADING PURPOSES) */
   setTimeout(function () {
     for (var i = 1; i < 9; i++) {
       if (i === 1) {
-        $('.skillsBar').css({'opacity': 1})
+        $('.skillsBar').css({'opacity': 1});
         $('.myName').fadeIn(3000);
+        $('.header').fadeIn(3000);
       }
-      $('#skill' + i).fadeOut(1)
-      $('#skill' + i).fadeIn((i * 1000) / 2)
+      $('#skill' + i).fadeOut(1);
+      $('#skill' + i).fadeIn((i * 1000) / 2);
     };
   }, 3000)
-
-/*
-SCROLL ARROW FADE ON SCROLL
-*/
-
+  /* SCROLL ARROW FADE ON SCROLL */
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
-      $('.scrollArrow').fadeOut()
+      $('.scrollArrow').fadeOut();
      }
      else{
-      $('.scrollArrow').fadeIn()
+      $('.scrollArrow').fadeIn();
     }
   })
-
-
-/*
-LOADING ANIMATION
-*/
+  /* LOADING ANIMATION */
   setTimeout(function () {
-    $('.loadingLine').fadeOut(100)
+    $('.loadingLine').fadeOut(100);
   }, 950)
-
   $(function () {
     $('.loadingLine').animate({
       left : '100'
@@ -202,7 +166,7 @@ LOADING ANIMATION
       left : '100'
       }, 500)
       })
-})
+});
 
 
 /* REDUNDANT SCRIPT */
