@@ -91,10 +91,10 @@ body {
 }
 
 .introBox .personalBar .contactBar span {
-  border         : 2px solid #345863;
-  border-color   : #345863;
+  border         : 2px solid #031626;
+  border-color   : #031626;
   border-radius  : 4px;
-  color          : #345863;
+  color          : #031626;
   display        : inline-block;
   height         : 20px;
   line-height    : 19px;
@@ -124,9 +124,9 @@ visibility: hidden;
   margin       : auto;
   opacity      : .6;
   cursor:pointer;
-  border-color   : #345863;
+  border-color   : #031626;
   border-radius  : 4px;
-  color          : #345863;
+  color          : #031626;
   line-height    : 35px;
   opacity        : .4;
   text-align     : right;
@@ -155,7 +155,7 @@ visibility: hidden;
 }
 
 .introBox .personalBar .contactBar span:hover {
-  box-shadow : 0 0 8px 1px #345863,
+  box-shadow : 0 0 8px 1px #031626,
                0 0 2px 1px #FFFFFF;
   opacity    : 1;
   transition : 1.4s;
@@ -365,9 +365,10 @@ visibility: hidden;
   border            : none;
   color             : white;
   cursor            : pointer;
-  font-size         : 15px;
+  font-size         : 18px;
   outline           : none;
-  overflow          : hidden;
+  display:inline-block;
+  margin-right:90%;
 }
 
 .imgGallery {
@@ -375,7 +376,7 @@ visibility: hidden;
   border-radius : 10px;
   height        : auto;
   margin        : auto;
-  margin-top:10%;
+  margin-top:1%;
   text-align:center;
   width         : 100%;
 }
@@ -395,12 +396,12 @@ visibility: hidden;
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
-        margin-right:7vw;
+        margin-right:4%;
 
 }
 
 .nextarrow:last-of-type{
-        margin-left:7vw;
+        margin-left:4%;
 
 }
 
@@ -461,8 +462,32 @@ visibility: hidden;
   height:4px;
 }
 
+.connectBtnBar {
+  padding-bottom:80px;
+  width:100%;
+  margin-top:30px;
+  height:50px;
+  text-align:center;
+}
 
+.connectBtnBar input{
 
+  display:inline-block;
+  height:100%;
+  width:auto;
+  margin-left:20px;
+  margin-right:20px;
+
+}
+
+.connectBtnBar input:hover{
+
+  border-radius:100px;
+  box-shadow : 0 0 8px 1px #031626,
+               0 0 2px 1px #FFFFFF;
+  transition : 1.4s;
+
+}
 
 
 
