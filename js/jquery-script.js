@@ -95,6 +95,8 @@ $(function () {
       return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
     }
     /* GALLERY CAROUSEL */
+
+    /* TODO CREATE A FUNCTION AND PASS THE DIFFERENCES AS ARGUMENETS, NEXT ARROW / SWIPE LEFT etc */
     $(".nextarrow:last-of-type").click(function () {
       clickCount += 1;
       var cycleNum = 1;
@@ -182,6 +184,20 @@ $(function () {
       left : '100'
       }, 500)
       })
+
+      /* Connect Button Swap */
+  var sourceSwap = function () {
+    var $this = $(this);
+    var newSource = $this.data('alt-src');
+    $this.data('alt-src', $this.attr('src'));
+    $this.attr('src', newSource);
+  }
+  $(function() {
+      $('input[data-alt-src]').each(function() {
+          new Image().src = $(this).data('alt-src');
+      }).hover(sourceSwap, sourceSwap);
+  });
+
 });
 
 
