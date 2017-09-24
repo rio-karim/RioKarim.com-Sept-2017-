@@ -23,6 +23,7 @@ $(function () {
     };
     $('<img />', {
       class: 'mainImg',
+      id: 'selected',
       src: fpath + folder + '1' + ftype
     }).appendTo(".selectedImg");
   }
@@ -94,13 +95,28 @@ $(function () {
       return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
     }
     /* GALLERY CAROUSEL */
-    $(".nextarrow").click(function () {
+    $(".nextarrow:last-of-type").click(function () {
       clickCount += 1;
       var cycleNum = 1;
       var $selected = $("#selected").removeAttr("id");
       var cycleImgs = $('.thumbContainer').children();
       console.log(cycleImgs);
-      if (clickCount == 1)cycleNum = 2;
+      if (clickCount === 1)cycleNum = 2;
+      var currentImg = cycleImgs.eq((cycleImgs.index($selected) + cycleNum) % cycleImgs.length).attr('id', 'selected');
+      var cycledUrl = currentImg.attr('src');
+      console.log(cycledUrl);
+      $('.mainImg').fadeOut(1000, function () {
+        $(this).attr('src', cycledUrl);
+      }).fadeIn(1000);
+    });
+
+    $(".nextarrow:first-of-type").click(function () {
+      clickCount += 1;
+      var cycleNum = -1;
+      var $selected = $("#selected").removeAttr("id");
+      var cycleImgs = $('.thumbContainer').children();
+      console.log(cycleImgs);
+      if (clickCount === 1)cycleNum = cycleImgs.length;
       var currentImg = cycleImgs.eq((cycleImgs.index($selected) + cycleNum) % cycleImgs.length).attr('id', 'selected');
       var cycledUrl = currentImg.attr('src');
       console.log(cycledUrl);
