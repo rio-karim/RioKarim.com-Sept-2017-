@@ -82,10 +82,10 @@ $(function () {
       $('.gallery').on('click', function () {
         switchGallery(this.id);
         galleryEvents();
-        $('closeBtn').addClass('opened');
+        $('.popup button').addClass('opened');
         $('.black_overlay').fadeToggle();
       });
-      $('.closeBtn').on('click', function () {
+      $('.popup button').on('click', function () {
         closeWindow($('.gallery'));
         return false;
       });
