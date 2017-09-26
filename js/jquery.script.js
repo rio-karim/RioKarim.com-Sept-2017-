@@ -2,23 +2,21 @@ $(function () {
   /* VARIABLE DECLARATIONS */
   var filetype = '.png';
   var filepath = 'css/gallery/';
-  var filefolder = ['star/', 'spurs/', 'vue/', 'javaquiz/', 'javastock/', 'galactisee/'];
-  var filecount = [4, 6, 0, 6, 5, 0];
-  var fadeID = ['.loadingBox', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader'];
-  var fadeNUM = [200, 1000, 1000, 1000, 1000, 1000, 1000];
-  var timeoutNUM = [0, 6000, 4240, 6000, 6200, 6200];
+  var filefolder = ['star/', 'spurs/', 'vue/', 'javaquiz/', 'javastock/', 'galactisee/', 'cardiffu/'];
+  var filecount = [4, 6, 2, 6, 5, 2, 3];
+  var fadeID = ['.myName', '.loadingBox', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader', '.header'];
+  var fadeNUM = [3000, 200, 1000, 1000, 1000, 1000, 1000, 1000];
+  var timeoutNUM = [3000, 0, 6000, 4240, 6000, 6200, 6200, 3000];
   var clickCount = 0;
 
     /* CONTENT SLIDE-IN PLUGIN
       https://github.com/lwiesel/jquery-fadethis
     */
-  $(window).fadeThis({offset: -150, reverse: false});
+  $(window).fadeThis({offset: -100, reverse: false});
   /*  PAGE ANIMATIONS */
-  $('.myName').fadeOut(1).css({'opacity': 1});
-  $('.header').fadeOut(1).css({'visibility': 'visible'});
 
   function setVisible(stringID) {
-    $(stringID).fadeOut(1).css({'visibility': 'visible'});
+    $(stringID).fadeOut(100).css({'visibility': 'visible'});
   };
   for (var i = 0; i < fadeID.length; i++) {
     setVisible(fadeID[i]);
@@ -35,13 +33,11 @@ $(function () {
     for (var i = 1; i < 9; i++) {
       if (i === 1) {
         $('.skillsBar').css({'opacity': 1});
-        $('.myName').fadeIn(3000);
-        $('.header').fadeIn(3000);
       }
-      $('#skill' + i).fadeOut(1);
+      $('#skill' + i).fadeOut(0);
       $('#skill' + i).fadeIn((i * 1000) / 2);
     };
-  }, 3000)
+  }, 3000);
   /* SCROLL ARROW FADE ON SCROLL */
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
@@ -54,7 +50,7 @@ $(function () {
   /* LOADING ANIMATION */
   setTimeout(function () {
     $('.loadingBox').fadeOut(200);
-  }, 2700)
+  }, 2700);
   $(function () {
     $('.loadingLine').animate({
       left : '250'
@@ -104,34 +100,11 @@ $(function () {
                       break;
       case 'Galactisee': getGallery(filetype, filepath, filefolder[5], filecount[5])
                       break;
+      case 'Cardiffu': getGallery(filetype, filepath, filefolder[6], filecount[6])
+                      break;
     }
   };
-  /* GALLERY ACTION EVENTS */
-  function galleryEvents () {
-    $('.thumbContainer img').on({
-      mouseover: function () {
-        $(this).css({
-          'cursor': 'pointer',
-          'border-color': '#7f1a1c',
-          'transition': '.7s'
-        });
 
-      },
-      mouseout: function () {
-        $(this).css({
-          'cursor': 'default',
-          'border-color': 'grey'
-        });
-      },
-      click: function () {
-        var imageUrl = $(this).attr('src');
-        $('.mainImg').removeAttr("id");
-        $('.mainImg').fadeOut(1000, function () {
-          $(this).attr('src', imageUrl);
-          }).fadeIn(1000);
-        }
-    });
-  };
     /* GALLERY CLOSE */
     function closeWindow(e) {
       $('.black_overlay').fadeToggle(function () {
@@ -143,7 +116,6 @@ $(function () {
     $(function () {
       $('.content input').on('click', function () {
         switchGallery(this.id);
-        galleryEvents();
         $('.popup button').addClass('opened');
         $('.black_overlay').fadeToggle();
       });
@@ -169,9 +141,9 @@ $(function () {
       var currentImg = cycleImgs.eq((cycleImgs.index($selected) + cycleNum) % cycleImgs.length).attr('id', 'selected');
       var cycledUrl = currentImg.attr('src');
       console.log(cycledUrl);
-      $('.mainImg').fadeOut(1000, function () {
+      $('.mainImg').fadeOut(600, function () {
         $(this).attr('src', cycledUrl);
-      }).fadeIn(1000);
+      }).fadeIn(600);
     });
 
     $(".nextarrow:first-of-type").click(function () {
@@ -184,9 +156,9 @@ $(function () {
       var currentImg = cycleImgs.eq((cycleImgs.index($selected) + cycleNum) % cycleImgs.length).attr('id', 'selected');
       var cycledUrl = currentImg.attr('src');
       console.log(cycledUrl);
-      $('.mainImg').fadeOut(1000, function () {
+      $('.mainImg').fadeOut(600, function () {
         $(this).attr('src', cycledUrl);
-      }).fadeIn(1000);
+      }).fadeIn(600);
     });
 
       /* Connect Button Swap */
