@@ -4,7 +4,7 @@ $(function () {
   var filepath = 'css/gallery/';
   var filefolder = ['star/', 'spurs/', 'vue/', 'javaquiz/', 'javastock/', 'galactisee/'];
 
-  var fadeID = ['.loadingLine', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader'];
+  var fadeID = ['.loadingBox', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader'];
   var fadeNUM = [200, 1000, 1000, 1000, 1000, 1000, 1000];
   var timeoutNUM = [0, 6000, 4240, 6000, 6200, 6200];
   var filecount = [4, 6, 0, 6, 5, 0];
@@ -169,19 +169,19 @@ $(function () {
   })
   /* LOADING ANIMATION */
   setTimeout(function () {
-    $('.loadingLine').fadeOut(100);
-  }, 950)
+    $('.loadingBox').fadeOut(100);
+  }, 2400)
   $(function () {
     $('.loadingLine').animate({
-      left : '100'
+      left : '250'
       }, 500).animate({
-      left : '-100'
+      left : '-250'
       }, 500).animate({
-      left : '100'
+      left : '250'
       }, 500).animate({
-      left : '-100'
+      left : '-250'
       }, 500).animate({
-      left : '100'
+      left : '250'
       }, 500)
       })
 
@@ -196,8 +196,9 @@ $(function () {
       $('input[data-alt-src]').each(function() {
           new Image().src = $(this).data('alt-src');
       }).hover(sourceSwap, sourceSwap);
-  });
-
+});
+  /* https://github.com/lwiesel/jquery-fadethis */
+  $(window).fadeThis({offset: -150, reverse: false});
 });
 
 
