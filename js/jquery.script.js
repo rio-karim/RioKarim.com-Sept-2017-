@@ -3,13 +3,75 @@ $(function () {
   var filetype = '.png';
   var filepath = 'css/gallery/';
   var filefolder = ['star/', 'spurs/', 'vue/', 'javaquiz/', 'javastock/', 'galactisee/'];
-
+  var filecount = [4, 6, 0, 6, 5, 0];
   var fadeID = ['.loadingBox', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader'];
   var fadeNUM = [200, 1000, 1000, 1000, 1000, 1000, 1000];
   var timeoutNUM = [0, 6000, 4240, 6000, 6200, 6200];
-  var filecount = [4, 6, 0, 6, 5, 0];
-
   var clickCount = 0;
+
+    /* CONTENT SLIDE-IN PLUGIN
+      https://github.com/lwiesel/jquery-fadethis
+    */
+  $(window).fadeThis({offset: -150, reverse: false});
+  /*  PAGE ANIMATIONS */
+  $('.myName').fadeOut(1).css({'opacity': 1});
+  $('.header').fadeOut(1).css({'visibility': 'visible'});
+
+  function setVisible(stringID) {
+    $(stringID).fadeOut(1).css({'visibility': 'visible'});
+  };
+  for (var i = 0; i < fadeID.length; i++) {
+    setVisible(fadeID[i]);
+    timeoutFadeIn(fadeID[i], fadeNUM[i], timeoutNUM[i]);
+  };
+  function timeoutFadeIn(stringID, intFade, intTimeout) {
+    setTimeout(function () {
+        $(stringID).fadeIn(intFade);
+    }, intTimeout)
+  };
+
+  /* SKILLBAR AND NAME FADE (SEPERATE FOR LOADING PURPOSES) */
+  setTimeout(function () {
+    for (var i = 1; i < 9; i++) {
+      if (i === 1) {
+        $('.skillsBar').css({'opacity': 1});
+        $('.myName').fadeIn(3000);
+        $('.header').fadeIn(3000);
+      }
+      $('#skill' + i).fadeOut(1);
+      $('#skill' + i).fadeIn((i * 1000) / 2);
+    };
+  }, 3000)
+  /* SCROLL ARROW FADE ON SCROLL */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 0) {
+      $('.scrollArrow').fadeOut();
+     }
+     else{
+      $('.scrollArrow').fadeIn();
+    }
+  });
+  /* LOADING ANIMATION */
+  setTimeout(function () {
+    $('.loadingBox').fadeOut(200);
+  }, 2700)
+  $(function () {
+    $('.loadingLine').animate({
+      left : '250'
+      }, 500).animate({
+      left : '-250'
+      }, 500).animate({
+      left : '250'
+      }, 500).animate({
+      left : '-250'
+      }, 500).animate({
+      left : '250'
+      }, 500).animate({
+      left : '-250'
+      }, 500).animate({
+      left : '250'
+      }, 500)
+    });
 
   /* IMAGE GALLERY APPEND */
   function getGallery(ftype, fpath, folder, folderNum){
@@ -26,7 +88,7 @@ $(function () {
       id: 'selected',
       src: fpath + folder + '1' + ftype
     }).appendTo(".selectedImg");
-  }
+  };
   /* CHANGE GALLERY TOPIC */
   function switchGallery(btn) {
     switch (btn){
@@ -43,7 +105,7 @@ $(function () {
       case 'Galactisee': getGallery(filetype, filepath, filefolder[5], filecount[5])
                       break;
     }
-  }
+  };
   /* GALLERY ACTION EVENTS */
   function galleryEvents () {
     $('.thumbContainer img').on({
@@ -65,37 +127,37 @@ $(function () {
         var imageUrl = $(this).attr('src');
         $('.mainImg').removeAttr("id");
         $('.mainImg').fadeOut(1000, function () {
-          $(this).attr('id', 'selected');
           $(this).attr('src', imageUrl);
           }).fadeIn(1000);
         }
     });
-  }
+  };
     /* GALLERY CLOSE */
     function closeWindow(e) {
       $('.black_overlay').fadeToggle(function () {
         e.removeClass('opened');
+        clickCount = 0;
       });
-    }
+    };
     /* GALLERY OPEN */
     $(function () {
-      $('.gallery').on('click', function () {
+      $('.content input').on('click', function () {
         switchGallery(this.id);
         galleryEvents();
         $('.popup button').addClass('opened');
         $('.black_overlay').fadeToggle();
       });
       $('.popup button').on('click', function () {
-        closeWindow($('.gallery'));
+        closeWindow($('.content input'));
+        clickCount = 0;
         return false;
       });
     });
 
     $.fn.fadeToggle = function (easing, callback) {
       return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
-    }
+    };
     /* GALLERY CAROUSEL */
-
     /* TODO CREATE A FUNCTION AND PASS THE DIFFERENCES AS ARGUMENETS, NEXT ARROW / SWIPE LEFT etc */
     $(".nextarrow:last-of-type").click(function () {
       clickCount += 1;
@@ -127,78 +189,18 @@ $(function () {
       }).fadeIn(1000);
     });
 
-
-
-  /*  PAGE ANIMATIONS */
-  $('.myName').fadeOut(1).css({'opacity': 1});
-  $('.header').fadeOut(1).css({'visibility': 'visible'});
-
-  function setVisible(stringID) {
-    $(stringID).fadeOut(1).css({'visibility': 'visible'});
-  };
-
-  function timeoutFadeIn(stringID, intFade, intTimeout) {
-    setTimeout(function () {
-        $(stringID).fadeIn(intFade);
-    }, intTimeout)
-  };
-  for (var i = 0; i < fadeID.length; i++) {
-    setVisible(fadeID[i]);
-    timeoutFadeIn(fadeID[i], fadeNUM[i], timeoutNUM[i]);
-  };
-  /* SKILLBAR AND NAME FADE (SEPERATE FOR LOADING PURPOSES) */
-  setTimeout(function () {
-    for (var i = 1; i < 9; i++) {
-      if (i === 1) {
-        $('.skillsBar').css({'opacity': 1});
-        $('.myName').fadeIn(3000);
-        $('.header').fadeIn(3000);
-      }
-      $('#skill' + i).fadeOut(1);
-      $('#skill' + i).fadeIn((i * 1000) / 2);
-    };
-  }, 3000)
-  /* SCROLL ARROW FADE ON SCROLL */
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 0) {
-      $('.scrollArrow').fadeOut();
-     }
-     else{
-      $('.scrollArrow').fadeIn();
-    }
-  })
-  /* LOADING ANIMATION */
-  setTimeout(function () {
-    $('.loadingBox').fadeOut(100);
-  }, 2400)
-  $(function () {
-    $('.loadingLine').animate({
-      left : '250'
-      }, 500).animate({
-      left : '-250'
-      }, 500).animate({
-      left : '250'
-      }, 500).animate({
-      left : '-250'
-      }, 500).animate({
-      left : '250'
-      }, 500)
-      })
-
       /* Connect Button Swap */
   var sourceSwap = function () {
     var $this = $(this);
     var newSource = $this.data('alt-src');
     $this.data('alt-src', $this.attr('src'));
     $this.attr('src', newSource);
-  }
-  $(function() {
-      $('input[data-alt-src]').each(function() {
+  };
+  $(function () {
+      $('input[data-alt-src]').each(function () {
           new Image().src = $(this).data('alt-src');
       }).hover(sourceSwap, sourceSwap);
-});
-  /* https://github.com/lwiesel/jquery-fadethis */
-  $(window).fadeThis({offset: -150, reverse: false});
+  });
 });
 
 
