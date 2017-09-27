@@ -6,14 +6,15 @@
 }
 
 body {
-  height : 100%;
-  overflow-y:scroll;
+  height     : 100%;
+  overflow-y : scroll;
 }
 
 a {
-  color: #3e5fad;
-  text-decoration: none;
+  color           : #3e5fad;
+  text-decoration : none;
 }
+
 /* HEADER */
 
 .header {
@@ -88,8 +89,8 @@ a {
   height     : 120px;
   margin     : auto;
   text-align : center;
+  visibility : hidden;
   width      : 100%;
-  visibility:hidden;
 }
 
 .introBox .loadingBox {
@@ -235,10 +236,10 @@ a {
 .content:nth-of-type(6) {
   padding-bottom : 90px;
 }
+
 .content:nth-of-type(7) {
   padding-bottom : 90px;
 }
-
 
 .content:nth-of-type(8) {
   padding-bottom : 10px;
@@ -774,22 +775,12 @@ a {
   }
 }
 
-@media only screen
-       and (max-width : 322px) {
-  .scrollArrow {
-    left         : 180px;
-    margin-left  : auto;
-    margin-right : auto;
-    right        : 0;
-  }
-}
-
 /* Gallery Media Query */
 
 @media only screen
        and (min-device-width : 1025px)
        and (max-device-width : 1280px)
-       and (orientation      : landscape) {
+       and (orientation      : andscape) {
   .black_overlay .popup {
     margin-top : 3%;
   }
@@ -798,7 +789,7 @@ a {
 @media only screen
        and (min-device-width : 768px)
        and (max-device-width : 1024px)
-       and (orientation      : landscape) {
+       and (orientation      : andscape) {
   .black_overlay .popup {
     margin-top : 15%;
   }
@@ -807,7 +798,7 @@ a {
 @media only screen
        and (min-device-width : 300px)
        and (max-device-width : 767px)
-       and (orientation      : landscape) {
+       and (orientation      : andscape) {
   .black_overlay .popup {
     margin-top : 6%;
   }

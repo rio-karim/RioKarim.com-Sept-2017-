@@ -12,7 +12,7 @@ $(function () {
     /* CONTENT SLIDE-IN PLUGIN
       https://github.com/lwiesel/jquery-fadethis
     */
-  $(window).fadeThis({offset: -100, reverse: false});
+  $(window).fadeThis({offset: -150, reverse: false});
   /*  PAGE ANIMATIONS */
 
   function setVisible(stringID) {
@@ -49,8 +49,8 @@ $(function () {
   });
   /* LOADING ANIMATION */
   setTimeout(function () {
-    $('.loadingBox').fadeOut(200);
-  }, 2700);
+    $('.loadingBox').fadeOut(50);
+  }, 2000);
   $(function () {
     $('.loadingLine').animate({
       left : '250'
