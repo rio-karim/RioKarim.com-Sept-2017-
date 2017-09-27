@@ -50,7 +50,7 @@ $(function () {
   /* LOADING ANIMATION */
   setTimeout(function () {
     $('.loadingBox').fadeOut(50);
-  }, 2000);
+  }, 2500);
   $(function () {
     $('.loadingLine').animate({
       left : '250'
@@ -114,13 +114,13 @@ $(function () {
     };
     /* GALLERY OPEN */
     $(function () {
-      $('.content input').on('click', function () {
+      $('.gallery').on('click', function () {
         switchGallery(this.id);
         $('.popup button').addClass('opened');
         $('.black_overlay').fadeToggle();
       });
       $('.popup button').on('click', function () {
-        closeWindow($('.content input'));
+        closeWindow($('.gallery'));
         clickCount = 0;
         return false;
       });

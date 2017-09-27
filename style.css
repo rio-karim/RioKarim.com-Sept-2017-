@@ -39,7 +39,7 @@ a {
   border        : 2px solid white;
   border-radius : 20px;
   display       : inline-block;
-  height        : 70%;
+  height        : 25px;
   margin-left   : 3px;
   margin-right  : 3px;
   opacity       : .4;
@@ -661,9 +661,8 @@ a {
     margin-bottom : -35px;
   }
 
-  .header .connectTop {
-    height     : 28px;
-    margin-top : 6px;
+  .header .connectTop input{
+    height     : 19px;
   }
 
   .header .forkBtn {
