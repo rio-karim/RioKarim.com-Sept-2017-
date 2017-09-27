@@ -16,7 +16,7 @@ $(function () {
   /*  PAGE ANIMATIONS */
 
   function setVisible(stringID) {
-    $(stringID).fadeOut(100).css({'visibility': 'visible'});
+    $(stringID).fadeOut(0).css({'visibility': 'visible'});
   };
   for (var i = 0; i < fadeID.length; i++) {
     setVisible(fadeID[i]);
