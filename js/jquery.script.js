@@ -3,7 +3,7 @@ $(function () {
   var filetype = '.png';
   var filepath = 'css/gallery/';
   var filefolder = ['star/', 'spurs/', 'vue/', 'javaquiz/', 'javastock/', 'galactisee/', 'cardiffu/'];
-  var filecount = [4, 6, 2, 6, 5, 2, 3];
+  var filecount = [4, 6, 2, 6, 4, 2, 3];
   var fadeID = ['.myName', '.loadingBox', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader', '.header'];
   var fadeNUM = [3000, 200, 1000, 1000, 1000, 1000, 1000, 1000];
   var timeoutNUM = [3000, 0, 6000, 4240, 6000, 6200, 6200, 3000];
