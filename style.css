@@ -82,6 +82,7 @@ a {
 
 /* INTRO */
 
+
 .introBox .myName {
   color      : #031626;
   display    : inline-block;
@@ -196,11 +197,16 @@ a {
   transition : 1.4s;
 }
 
+.introstrong {
+  text-align:center;
+
+}
+
 .introBox .projectsHeader {
   color      : #031626;
   float      : left;
   font-size  : 25px;
-  margin-top : 100px;
+  margin-top : 700px;
   text-align : center;
   visibility : hidden;
   width      : 100%;
@@ -350,7 +356,6 @@ a {
   margin       : 0 auto;
   margin-left  : auto;
   margin-right : auto;
-  opacity      : .6;
   position     : fixed;
   right        : 0;
   visibility   : hidden;
@@ -702,7 +707,7 @@ a {
   .introBox .projectsHeader {
     font-size     : 20px;
     margin-bottom : -40px;
-    margin-top    : 170px;
+    margin-top    : 1000px;
     width         : 100%;
   }
 
@@ -727,7 +732,7 @@ a {
   }
 
   .introBox .projectsHeader {
-    margin-top : 270px;
+    margin-top : 1000px;
   }
 }
 
@@ -758,7 +763,7 @@ a {
 
   .introBox .projectsHeader {
     font-size  : 18px;
-    margin-top : 380px;
+    margin-top : 1200px;
   }
 
   .connectFooter {
