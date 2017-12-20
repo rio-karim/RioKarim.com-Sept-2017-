@@ -241,6 +241,7 @@ a {
 
 .content .pageLink {
   text-decoration: underline;
+  font-weight: bold;
 }
 .content:nth-of-type(4) {
   padding-bottom : 90px;
