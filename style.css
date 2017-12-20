@@ -239,6 +239,9 @@ a {
   width          : 96%;
 }
 
+.content .pageLink {
+  text-decoration: underline;
+}
 .content:nth-of-type(4) {
   padding-bottom : 90px;
 }
