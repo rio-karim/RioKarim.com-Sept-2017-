@@ -4,10 +4,9 @@ $(function () {
   var filepath = 'css/gallery/';
   var filefolder = ['star/', 'spurs/', 'vue/', 'javaquiz/', 'javastock/', 'galactisee/', 'cardiffu/'];
   var filecount = [4, 6, 2, 6, 4, 2, 3];
-  var fadeID = ['.myName', '.loadingBox', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader', '.header'];
-    <!-- PLEASE NOTE LEGACY CODE FROM WHEN I HAD A LOADING SCREEN, ARRAY CONTROL OF FADE IN-->
-  var fadeNUM = [3000, 200, 1000, 1000, 1000, 1000, 1000, 1000];
-  var timeoutNUM = [0, 0, 3000, 2000, 3000, 3200, 3200, 0];
+  var fadeID = ['.myName', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader', '.header'];
+  var fadeNUM = [3000, 1000, 1000, 1000, 1000, 1000, 1000];
+  var timeoutNUM = [0, 3000, 2000, 3000, 3200, 3200, 0];
   var clickCount = 0;
 
 
@@ -39,7 +38,7 @@ $(function () {
       $('#skill' + i).fadeOut(0);
       $('#skill' + i).fadeIn((i * 1000) / 2);
     };
-  }, 200);
+  }, 400);
   /* SCROLL ARROW FADE ON SCROLL */
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
