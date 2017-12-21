@@ -49,28 +49,7 @@ console.log("Loading");
       $('.scrollArrow').fadeIn()
     }
   })
-  /* LOADING ANIMATION
-  setTimeout(function () {
-    $('.loadingBox').fadeOut(50)
-  }, 2500)
-  $(function () {
-    $('.loadingLine').animate({
-      left : '250'
-      }, 500).animate({
-      left : '-250'
-      }, 500).animate({
-      left : '250'
-      }, 500).animate({
-      left : '-250'
-      }, 500).animate({
-      left : '250'
-      }, 500).animate({
-      left : '-250'
-      }, 500).animate({
-      left : '250'
-      }, 500)
-    })
-*/
+
   /* IMAGE GALLERY APPEND */
   function getGallery(ftype, fpath, folder, folderNum){
     $(".thumbContainer").empty()
@@ -176,6 +155,20 @@ console.log("Loading");
       }).hover(sourceSwap, sourceSwap)
   })
   console.log("Complete")
+  /*Simply check for script*/
+
+
+
+
+
+
+
+
+
+
+
+  
+  /*
 })
 
 
@@ -194,7 +187,29 @@ console.log("Loading");
   }, 6500)
   */
 
-
+/*
+/* LOADING ANIMATION
+setTimeout(function () {
+  $('.loadingBox').fadeOut(50)
+}, 2500)
+$(function () {
+  $('.loadingLine').animate({
+    left : '250'
+    }, 500).animate({
+    left : '-250'
+    }, 500).animate({
+    left : '250'
+    }, 500).animate({
+    left : '-250'
+    }, 500).animate({
+    left : '250'
+    }, 500).animate({
+    left : '-250'
+    }, 500).animate({
+    left : '250'
+    }, 500)
+  })
+*/
 /* SCROLL LOCK */
 /*
 function lockScroll() {
