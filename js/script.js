@@ -9,11 +9,7 @@ console.log("Loading");
   var fadeNUM = [3000, 1000, 1000, 1000, 1000, 1000, 1000];
   var timeoutNUM = [0, 3000, 2000, 3000, 3200, 3200, 0];
   var clickCount = 0;
-
-
-    /* CONTENT SLIDE-IN PLUGIN
-      https://github.com/lwiesel/jquery-fadethis
-    */
+  
   $(window).fadeThis({offset: -150, reverse: false})
   /*  PAGE ANIMATIONS */
 
@@ -167,7 +163,7 @@ console.log("Loading");
 
 
 
-  
+
   /*
 })
 
