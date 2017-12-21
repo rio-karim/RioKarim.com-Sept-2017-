@@ -55,11 +55,11 @@ a {
   opacity       : .6;
   border        : 2px solid white;
   border-radius : 20px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .header .connectTop input:hover {
   opacity    : 1;
-  transition : 1s;
 }
 
 .header .forkBtn {
@@ -76,6 +76,7 @@ a {
   font-size     : 97%;
   line-height   : 35px;
   cursor        : pointer;
+  transition: opacity 1s ease-in-out;
 }
 
 .header .forkBtn img {
@@ -88,7 +89,6 @@ a {
 
 .header .forkBtn:hover {
   opacity    : 1;
-  transition : 1s;
 }
 
 /* INTRO */
@@ -181,6 +181,7 @@ a {
   border-radius  : 4px;
   text-align     : center;
   line-height    : 19px;
+  transition: opacity .9s ease-in-out;
 }
 
 .introBox .personalBar .contactBar .contactImg {
@@ -192,8 +193,8 @@ a {
 
 .introBox .personalBar .contactBar span:hover {
   opacity    : 1;
-  box-shadow : 0 0 4px 1px #F05033;
-  transition : .8s;
+  transition: .9s;
+  box-shadow : 0 0 2px 1px #F05033;
 }
 
 /* Body / Content */
@@ -216,8 +217,17 @@ a {
 }
 
 .content .pageLink {
-  text-decoration : underline;
+  color: #1c1b1b;
   font-weight     : bold;
+}
+
+.content h1{
+  text-decoration:none;
+  transition: color .5s ease-in-out;
+}
+
+.content h1:hover {
+  color: #F05033;
 }
 
 .content:nth-of-type(4) {
@@ -695,7 +705,7 @@ a {
 @media only screen
        and (min-device-width : 1025px)
        and (max-device-width : 1280px)
-       and (orientation      : andscape) {
+       and (orientation      : Landscape) {
   .black_overlay .popup {
     margin-top : 3%;
   }
@@ -704,7 +714,7 @@ a {
 @media only screen
        and (min-device-width : 768px)
        and (max-device-width : 1024px)
-       and (orientation      : andscape) {
+       and (orientation      : Landscape) {
   .black_overlay .popup {
     margin-top : 15%;
   }
@@ -713,7 +723,7 @@ a {
 @media only screen
        and (min-device-width : 300px)
        and (max-device-width : 767px)
-       and (orientation      : andscape) {
+       and (orientation      : Landscape) {
   .black_overlay .popup {
     margin-top : 6%;
   }
