@@ -389,6 +389,14 @@ a {
   width        : 8vw;
 }
 
+.content:nth-of-type(5) {
+  background     : #1c1b1b;
+  border-bottom  : none;
+  color          : white;
+  padding-bottom : 14%;
+  width          : 96%;
+}
+
 .content .connectFooter {
   font-size  : 18px;
   height     : 40px;
@@ -415,13 +423,67 @@ a {
   width         : auto;
 }
 
+
+
+
+.underlineMe {
+  text-decoration : underline;
+}
+
+.selfie {
+  border        : solid transparent;
+  padding:5%;
+  border-radius : 100px;
+  float         : left;
+  height        : auto;
+  width         : 81px;
+  margin-top:-8%;
+}
+#aboutMeHeader{
+  margin-left:25%;
+}
+
+.aboutMe {
+  float        : left;
+  font-size    : .7em;
+  padding-left : 2%;
+  width        : 80%;
+  margin-left:10%;
+}
+
+.connectBox {
+  display : inline-block;
+  float   : left;
+  width   : 49%;
+}
+
+.connectBox:last-of-type {
+}
+
+.connectBtn {
+  height : 20px;
+}
+
 /* Page Media Query */
+@media only screen and (max-width:1045px){
+  
+  .content:nth-of-type(5) {
+  padding-bottom : 23%;
+}
+}
 
 @media only screen
        and (max-width : 960px) {
   body {
     background-size : 150%;
   }
+}
+
+@media only screen and (max-width:843px){
+  
+  .content:nth-of-type(5) {
+  padding-bottom : 29%;
+}
 }
 
 @media only screen
@@ -435,16 +497,39 @@ a {
   .introBox .personalBar .personalIntro {
     width : 87%;
   }
-
-  .fadeBar {
-    visibility : visible;
-  }
-
+         
   .scrollArrow {
     height : 20px;
   }
 }
 
+@media only screen and (max-width:812px){
+  
+  .connectBox{
+    width:90%;
+}
+  
+  .content:nth-of-type(5) {
+  padding-bottom:45%;
+}
+  
+  .content .connectFooter .connectBotBar {
+  height     : 50px;
+  margin-top : 3%;
+  text-align : center;
+  width      : 100%;
+}
+  
+  .connectBox:last-of-type {
+  margin-top:15%;
+}
+
+  @media only screen and (max-width:700px){
+      .content:nth-of-type(5) {
+  padding-bottom:45%;
+}
+    
+  }
 @media only screen
        and (max-width : 650px) {
   .content {
@@ -492,45 +577,10 @@ a {
   .content:nth-of-type(6) {
     padding-bottom : 30px;
   }
+         
+               .content:nth-of-type(5) {
+  padding-bottom:10%;
 }
-
-.content:nth-of-type(5) {
-  background     : #1c1b1b;
-  border-bottom  : none;
-  color          : white;
-  padding-bottom : 18%;
-  width          : 96%;
-}
-
-.underlineMe {
-  text-decoration : underline;
-}
-
-.selfie {
-  border        : solid white;
-  border-radius : 100px;
-  float         : left;
-  height        : auto;
-  margin-left   : 20.1%;
-  margin-top    : 2%;
-  width         : 81px;
-}
-
-.aboutMe {
-  float        : left;
-  font-size    : .7em;
-  padding-left : 2%;
-  width        : 46%;
-}
-
-.connectBox {
-  display : inline-block;
-  float   : left;
-  width   : 50%;
-}
-
-.connectBtn {
-  height : 20px;
 }
 
 @media only screen
@@ -590,7 +640,18 @@ a {
     font-size : 18px;
   }
 }
+@media only screen
+  and (max-width : 409px){
+    
+                   .content:nth-of-type(5) {
+  padding-bottom:26%;
+}
+    .content .connectFooter .connectBotBar input {
 
+  margin-left   : 4.2%;
+  margin-right  : 4.2%;
+}
+  }
 @media only screen
        and (max-width : 400px) {
   .header .connectTop input {
