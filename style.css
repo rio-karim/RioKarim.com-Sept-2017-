@@ -264,6 +264,8 @@ a {
 
 .content .content_Learnt img {
   height : 70px;
+  margin-left:5px;
+  margin-right:5px;
 }
 
 .content .contentRI_Left {
@@ -662,7 +664,7 @@ a {
   .scrollArrow {
     height : 18px;
   }
-         
+
   .content .connectFooter .connectBotBar input {
     margin-right : 4.75%;
     margin-left  : 4.75%;
