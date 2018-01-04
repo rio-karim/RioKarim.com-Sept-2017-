@@ -55,7 +55,7 @@ a {
   opacity       : .6;
   border        : 2px solid white;
   border-radius : 20px;
-  transition: opacity 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header .connectTop input:hover {
@@ -76,7 +76,7 @@ a {
   font-size     : 97%;
   line-height   : 35px;
   cursor        : pointer;
-  transition: opacity 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .header .forkBtn img {
@@ -181,7 +181,7 @@ a {
   border-radius  : 4px;
   text-align     : center;
   line-height    : 19px;
-  transition: opacity .9s ease-in-out;
+  transition: all .9s ease-in-out;
 }
 
 .introBox .personalBar .contactBar .contactImg {
@@ -193,7 +193,6 @@ a {
 
 .introBox .personalBar .contactBar span:hover {
   opacity    : 1;
-  transition: .9s;
   box-shadow : 0 0 2px 1px #F05033;
 }
 
@@ -223,7 +222,7 @@ a {
 
 .content h1{
   text-decoration:none;
-  transition: color .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .content h1:hover {

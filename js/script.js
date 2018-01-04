@@ -3,6 +3,7 @@ console.log("Loading");
   /* VARIABLE DECLARATIONS */
   var filetype = '.png';
   var filepath = 'css/gallery/';
+  /* variables from website V1. Remain for alteration purposes */
   var filefolder = ['star/', 'spurs/', 'vue/', 'javaquiz/', 'javastock/', 'galactisee/', 'cardiffu/'];
   var filecount = [4, 6, 2, 6, 4, 2, 3];
   var fadeID = ['.myName', '.scrollArrow', '.personalBar', '.contactBar', '.content', '.projectsHeader', '.header'];
@@ -49,6 +50,8 @@ console.log("Loading");
       $('.scrollArrow').fadeIn()
     }
   })
+
+    /* functions from website V1. Remain for alteration purposes */
   /* LOADING ANIMATION
   setTimeout(function () {
     $('.loadingBox').fadeOut(50)
@@ -87,6 +90,7 @@ console.log("Loading");
       src: fpath + folder + '1' + ftype
     }).appendTo(".selectedImg")
   }
+    /* switch loop from website V1. Remain for alteration purposes */
   /* CHANGE GALLERY TOPIC */
   function switchGallery(btn) {
     switch (btn){
@@ -175,7 +179,6 @@ console.log("Loading");
           new Image().src = $(this).data('alt-src')
       }).hover(sourceSwap, sourceSwap)
   })
-  console.log("Complete")
 })
 
 
